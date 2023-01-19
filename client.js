@@ -10,8 +10,12 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
+
     conn.write("Name: ABR");
     console.log("This is my ABR");
+
+     conn.write("Say: I am the snEk King!");
+     console.log("This is my ABR");
 
     setTimeout(() => {
       conn.write("Move: up");
@@ -39,3 +43,11 @@ const connect = function () {
 };
 
 module.exports = connect;
+
+
+
+
+
+
+
+
