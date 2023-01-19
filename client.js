@@ -9,7 +9,25 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log("You are now connected!");
+    console.log("Successfully connected to game server");
+    conn.write("Name: ABR");
+    console.log("This is my ABR");
+
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 100);
+
+    setTimeout(() => {
+      conn.write("Move: down");
+    }, 100);
+
+    setTimeout(() => {
+      conn.write("Move: right");
+    }, 100);
+
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 100);
     // code that does something when the connection is first established
   });
 
@@ -20,4 +38,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect 
+module.exports = connect;
